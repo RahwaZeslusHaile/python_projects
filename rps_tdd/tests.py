@@ -15,13 +15,21 @@ class RpsTests(TestCase):
         self.assertEqual(result, "left")
 
     def test_scissors_vs_rock_right_wins(self):
-            left = "scissors"
-            right = "rock"
+        left = "scissors"
+        right = "rock"
 
-            result = rps(left, right)
+        result = rps(left, right)
 
-            self.assertEqual(result, "right")
+        self.assertEqual(result, "right")
+
+    def test_scissors_vs_paper_left_wins(self):
+        left = "scissors"
+        right = "paper"
+
+        result = rps(left, right)
+
+        self.assertEqual(result, "left")
 
 def rps(left,right):
-    return "left" if left =="rock" else "right"
+    return "left" if right != "rock" else "right"
     
