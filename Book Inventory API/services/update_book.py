@@ -17,4 +17,4 @@ def update_book_by_id_service(
 
     saved_book = update_book_by_id_from_db(book_id, update_book)
 
-    return Books_response_validation.model_validator(saved_book)
+    return Books_response_validation.model_validate(saved_book)
