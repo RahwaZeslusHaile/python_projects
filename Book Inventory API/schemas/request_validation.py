@@ -5,6 +5,6 @@ from pydantic import BaseModel
 
 class Books_request_validation(BaseModel):
     title: str
-    author: str
+    author_id: int
     price: Decimal
     quantity: int
