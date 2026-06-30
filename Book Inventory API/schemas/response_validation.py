@@ -1,13 +1,13 @@
 from datetime import datetime
 from decimal import Decimal
 
-from pydntic import BaseModel
+from pydantic import BaseModel
 
 
 class Books_response_validation(BaseModel):
-    id: str
+    book_id: int
     title: str
-    author: str
+    author_id: int
     price: Decimal
     quantity: int
     created_at: datetime
